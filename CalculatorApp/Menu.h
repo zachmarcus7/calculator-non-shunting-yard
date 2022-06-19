@@ -7,13 +7,13 @@
 
 class Menu
 {
-private:
-    Calculator calculator;
+    private:
+        Calculator calculator;
 
-public:
-    Menu();
-    void evaluatePrompt();
-    int validate();
-    bool run();
+    public:
+        Menu();
+        void evaluatePrompt();
+        int validate();
+        bool run();
 };
 #endif

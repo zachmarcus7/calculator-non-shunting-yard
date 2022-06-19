@@ -1,12 +1,16 @@
 #include "Calculator.h"
 
 
-// calculator constructor
+/****************************************************************
+* Default Constructor.
+*****************************************************************/
 Calculator::Calculator()
 {
 }
 
-// this is the main method for evaluating an expression
+/****************************************************************
+* This is the main method for evaluating an expression.
+*****************************************************************/
 std::string Calculator::evaluate(std::string expression)
 {
     // create variables for keeping track of values
@@ -79,8 +83,10 @@ std::string Calculator::evaluate(std::string expression)
     }
 }
 
-// this is the actual method for evaluating an expression with no parentheses
-// the operators param is used to evaluate for only the passed operators
+/****************************************************************
+* This is the actual method for evaluating an expression with no parentheses.
+* The operators param is used to evaluate for only the passed operators
+*****************************************************************/
 std::string Calculator::evaluateExpression(std::string expression, std::string operators) {
 
     std::string simplified;
@@ -142,7 +148,9 @@ std::string Calculator::evaluateExpression(std::string expression, std::string o
     return simplified;
 }
 
-// this method just applies the operator between the two passed numbers
+/****************************************************************
+* This method just applies the operator between the two passed numbers.
+*****************************************************************/
 int Calculator::applyOperator(int firstNum, char sign, int secondNum)
 {
     if (sign == '*')
@@ -163,20 +171,26 @@ int Calculator::applyOperator(int firstNum, char sign, int secondNum)
     }
 }
 
-// this is for getting the numeric value of a char
+/****************************************************************
+* This is for getting the numeric value of a char.
+*****************************************************************/
 int Calculator::toNum(char letter)
 {
     // get the ASCII value of the character and convert it
     return (int)letter - 48;
 }
 
-// this is for checking if a letter is a number (using ASCII)
+/****************************************************************
+* This is for checking if a letter is a number (using ASCII).
+*****************************************************************/
 bool Calculator::isNum(char letter)
 {
     return (letter >= 48 && letter <= 57) ? true : false;
 }
 
-// this is for checking if a letter is an operator
+/****************************************************************
+* This is for checking if a letter is an operator.
+*****************************************************************/
 bool Calculator::isOperator(char letter)
 {
     if (letter == '+' || letter == '-' || letter == '*' || letter == '/')
@@ -186,7 +200,10 @@ bool Calculator::isOperator(char letter)
     return false;
 }
 
-// this is for checking if an operator matches the passed operator string
+/****************************************************************
+* This is for checking if an operator matches the passed operator 
+* string.
+*****************************************************************/
 bool Calculator::matchingOperator(char letter, std::string operators)
 {
     if (operators.find(letter) != std::string::npos) {

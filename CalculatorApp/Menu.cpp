@@ -1,13 +1,18 @@
 #include "Menu.h"
 
 
-// menu constructor
+/****************************************************************
+* Default constructor.
+*****************************************************************/
 Menu::Menu()
 {
     this->calculator = Calculator();
 }
 
-// this is the prompt that gets shown when a user chooses to evaluate an expression
+/****************************************************************
+* This is the prompt that gets shown when a user chooses to evaluate 
+* an expression.
+*****************************************************************/
 void Menu::evaluatePrompt()
 {
     std::string input;
@@ -18,7 +23,9 @@ void Menu::evaluatePrompt()
     std::cout << "The result of your expression is: " << this->calculator.evaluate(input) << std::endl;
 }
 
-// this is for validating the user's selection from the opening menu
+/****************************************************************
+* This is for validating the user's selection from the opening menu.
+*****************************************************************/
 int Menu::validate()
 {
     int answer = 0;
@@ -41,7 +48,9 @@ int Menu::validate()
     return answer;
 }
 
-// this provides the user with a menu to choose an option
+/****************************************************************
+* This provides the user with a menu to choose an option.
+*****************************************************************/
 bool Menu::run()
 {
     // show opening prompt to user

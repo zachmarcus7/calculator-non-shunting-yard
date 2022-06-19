@@ -2,5 +2,5 @@
   CalculatorApp.cpp
   Menu.cpp
   Generating Code...
-C:\Users\zmarc\source\repos\CalculatorApp\CalculatorApp\Calculator.cpp(164): warning C4715: 'Calculator::applyOperator': not all control paths return a value
+C:\Users\zmarc\source\repos\CalculatorApp\CalculatorApp\Calculator.cpp(172): warning C4715: 'Calculator::applyOperator': not all control paths return a value
   CalculatorApp.vcxproj -> C:\Users\zmarc\source\repos\CalculatorApp\x64\Debug\CalculatorApp.exe
